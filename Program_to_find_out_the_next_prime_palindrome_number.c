@@ -1,0 +1,31 @@
+#include<stdio.h>
+int main()
+{
+    int a,b,s,r,i,j,c;
+    scanf("%d",&a);
+    for(a=a+1;a>0;a++)
+    {
+        b=0;
+        for(i=1;i<=a;i++)
+        {
+            if(a%i==0)
+            b++;
+        }
+        if(b==2)
+        {
+            j=a;
+            s=0;
+            while(j!=0)
+            {
+                r=j%10;
+                s=s*10+r;
+                j=j/10;
+            }
+            if(s==a)
+            {
+                printf("%d",a);
+                break;
+            }
+        }
+    }
+}
